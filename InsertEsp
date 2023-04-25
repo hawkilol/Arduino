@@ -70,18 +70,8 @@ char default_table[]    = "dadosTU";          //"test_arduino";
 String default_value    = ""; 
 String stringvalue = "dionne2222";
 
+String INSERT_SQL = "INSERT INTO topicos.dadosTU(usuario, idSensor, tempCelsius, umidade) VALUES (%s, %d, %.2f, %.2f)";
 
-// Sample query
-//String INSERT_SQL = String("INSERT INTO ") + default_database + "." + default_table 
-//                 + " (id,usuario,tempCelsius,umidade) VALUES ('" + 20, stringvalue, 12, 10 + "')";
-
-String INSERT_SQL = String("INSERT INTO ") + "topicos.dadosTU(idSensor, usuario, umidade, tempCelsius) VALUES (1337, "+ "Dionne" + " , 23, 25)";
-
-//String INSERT_SQL = String("INSERT INTO ") + default_database + "." + default_table 
-//20                 + "  ()")";
-                                
-//String INSERT_SQL = String("INSERT INTO ") + default_database + "." + default_table 
-  //               //+ " (message) VALUES ('" + default_value +
 
 MySQL_Connection conn((Client *)&client);
 
