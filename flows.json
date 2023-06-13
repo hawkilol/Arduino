@@ -1,0 +1,97 @@
+[
+    {
+        "id": "dbfc3e1c25b77dce",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "82b19f77ca3e5e9c",
+        "type": "group",
+        "z": "dbfc3e1c25b77dce",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d143b0df087d1171"
+        ],
+        "x": 694,
+        "y": 219,
+        "w": 212,
+        "h": 82
+    },
+    {
+        "id": "d143b0df087d1171",
+        "type": "mysql",
+        "z": "dbfc3e1c25b77dce",
+        "g": "82b19f77ca3e5e9c",
+        "mydb": "0d9c2edbc6857968",
+        "name": "labisfacompis",
+        "x": 800,
+        "y": 260,
+        "wires": [
+            [
+                "f4b8200ac5db297d"
+            ]
+        ]
+    },
+    {
+        "id": "e4bcdbffaba9cd65",
+        "type": "inject",
+        "z": "dbfc3e1c25b77dce",
+        "name": "SELECT * FROM dadosTU",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM dadosTU",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "d143b0df087d1171"
+            ]
+        ]
+    },
+    {
+        "id": "f4b8200ac5db297d",
+        "type": "debug",
+        "z": "dbfc3e1c25b77dce",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0d9c2edbc6857968",
+        "type": "MySQLdatabase",
+        "name": "topicos",
+        "host": "200.239.66.45",
+        "port": "3306",
+        "db": "topicos",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]
