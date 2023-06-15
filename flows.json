@@ -8,30 +8,6 @@
         "env": []
     },
     {
-        "id": "d847ba5241640e2b",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "1c8b0da7176cc792",
-        "type": "tab",
-        "label": "Flow 3",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "fbbf4453b3ed92ee",
-        "type": "tab",
-        "label": "Flow 4",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "82b19f77ca3e5e9c",
         "type": "group",
         "z": "dbfc3e1c25b77dce",
@@ -42,146 +18,10 @@
         "nodes": [
             "d143b0df087d1171"
         ],
-        "x": 1074,
-        "y": 179,
+        "x": 954,
+        "y": 299,
         "w": 212,
         "h": 82
-    },
-    {
-        "id": "f453a1a3063a8495",
-        "type": "MySQLdatabase",
-        "name": "",
-        "host": "127.0.0.1",
-        "port": "3306",
-        "db": "",
-        "tz": "",
-        "charset": "UTF8"
-    },
-    {
-        "id": "0d9c2edbc6857968",
-        "type": "MySQLdatabase",
-        "name": "topicos",
-        "host": "200.239.66.45",
-        "port": "3306",
-        "db": "topicos",
-        "tz": "",
-        "charset": "UTF8"
-    },
-    {
-        "id": "52e8852a8517a73e",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "0794cccf5deae733",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "4a4dc8f2e94523a9",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "52e8852a8517a73e",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "d143b0df087d1171",
@@ -190,48 +30,94 @@
         "g": "82b19f77ca3e5e9c",
         "mydb": "0d9c2edbc6857968",
         "name": "labisfacompis",
-        "x": 1180,
-        "y": 220,
+        "x": 1060,
+        "y": 340,
         "wires": [
             [
-                "59a4ab426584d92d"
+                "59a4ab426584d92d",
+                "982468b13a9f2aad",
+                "73a1c76e5f96479c",
+                "b25c22bb5479a509",
+                "8783469180b243cc"
             ]
         ]
     },
     {
-        "id": "e4bcdbffaba9cd65",
-        "type": "inject",
+        "id": "8d5b63fc28f62665",
+        "type": "ui_gauge",
         "z": "dbfc3e1c25b77dce",
-        "name": "in",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            }
+        "name": "",
+        "group": "d42de104e35cca84",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "umi",
+        "label": "units",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#7b3acb"
         ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "SELECT idData, usuario, idSensor, tempCelsius, umidade, dataHora FROM dadosTU WHERE idSensor=27 order by 1 desc limit 1;",
-        "x": 970,
-        "y": 220,
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1590,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "59a4ab426584d92d",
+        "type": "function",
+        "z": "dbfc3e1c25b77dce",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload[0].umidade;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 360,
         "wires": [
             [
-                "d143b0df087d1171"
+                "8d5b63fc28f62665",
+                "89c8fba661037bd3",
+                "68586e84983dded1"
             ]
         ]
     },
     {
-        "id": "ef76aaac23d9857c",
+        "id": "89c8fba661037bd3",
+        "type": "debug",
+        "z": "dbfc3e1c25b77dce",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1570,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "5a2990d39a473d2b",
         "type": "ui_chart",
         "z": "dbfc3e1c25b77dce",
         "name": "",
-        "group": "4a4dc8f2e94523a9",
-        "order": 1,
+        "group": "2b45f089c2d35363",
+        "order": 2,
         "width": 0,
         "height": 0,
-        "label": "chart",
+        "label": "temp",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -242,7 +128,7 @@
         "ymax": "",
         "removeOlder": 1,
         "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
+        "removeOlderUnit": "60",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
@@ -260,23 +146,128 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1710,
-        "y": 440,
+        "x": 1630,
+        "y": 180,
         "wires": [
             []
         ]
     },
     {
-        "id": "8d5b63fc28f62665",
+        "id": "982468b13a9f2aad",
+        "type": "function",
+        "z": "dbfc3e1c25b77dce",
+        "name": "function 2",
+        "func": "msg.payload = msg.payload[0].tempCelsius;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 280,
+        "wires": [
+            [
+                "5a2990d39a473d2b",
+                "9c76d85e30da6e3e"
+            ]
+        ]
+    },
+    {
+        "id": "9c02fa59033711eb",
+        "type": "inject",
+        "z": "dbfc3e1c25b77dce",
+        "name": "all",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT idData, usuario, idSensor, tempCelsius, umidade, dataHora FROM dadosTU WHERE idSensor=27 order by 1 desc limit 1;",
+        "x": 810,
+        "y": 360,
+        "wires": [
+            [
+                "d143b0df087d1171"
+            ]
+        ]
+    },
+    {
+        "id": "73a1c76e5f96479c",
+        "type": "debug",
+        "z": "dbfc3e1c25b77dce",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "68586e84983dded1",
+        "type": "ui_chart",
+        "z": "dbfc3e1c25b77dce",
+        "name": "",
+        "group": "d42de104e35cca84",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "umi",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1610,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c76d85e30da6e3e",
         "type": "ui_gauge",
         "z": "dbfc3e1c25b77dce",
         "name": "",
-        "group": "4a4dc8f2e94523a9",
+        "group": "2b45f089c2d35363",
         "order": 0,
         "width": 0,
         "height": 0,
         "gtype": "donut",
-        "title": "gauge",
+        "title": "temp",
         "label": "units",
         "format": "{{msg.payload}}",
         "min": 0,
@@ -290,45 +281,84 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1750,
-        "y": 340,
+        "x": 1630,
+        "y": 240,
         "wires": []
     },
     {
-        "id": "59a4ab426584d92d",
+        "id": "8783469180b243cc",
+        "type": "ui_toast",
+        "z": "dbfc3e1c25b77dce",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1150,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b25c22bb5479a509",
         "type": "function",
         "z": "dbfc3e1c25b77dce",
-        "name": "function 1",
-        "func": "msg.payload = msg.payload[0].tempCelsius;\nreturn msg;",
+        "name": "function 3",
+        "func": "msg.payload = msg.payload[0].umidade;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1340,
-        "y": 340,
+        "y": 620,
         "wires": [
-            [
-                "8d5b63fc28f62665",
-                "89c8fba661037bd3"
-            ]
+            []
         ]
     },
     {
-        "id": "89c8fba661037bd3",
-        "type": "debug",
-        "z": "dbfc3e1c25b77dce",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1590,
-        "y": 260,
-        "wires": []
+        "id": "0d9c2edbc6857968",
+        "type": "MySQLdatabase",
+        "name": "topicos",
+        "host": "200.239.66.45",
+        "port": "3306",
+        "db": "topicos",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "d42de104e35cca84",
+        "type": "ui_group",
+        "name": "umidade",
+        "tab": "52e8852a8517a73e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2b45f089c2d35363",
+        "type": "ui_group",
+        "name": "temperatura",
+        "tab": "52e8852a8517a73e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "52e8852a8517a73e",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     }
 ]
