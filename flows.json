@@ -18,7 +18,7 @@
         "nodes": [
             "d143b0df087d1171"
         ],
-        "x": 954,
+        "x": 914,
         "y": 299,
         "w": 212,
         "h": 82
@@ -30,7 +30,7 @@
         "g": "82b19f77ca3e5e9c",
         "mydb": "0d9c2edbc6857968",
         "name": "labisfacompis",
-        "x": 1060,
+        "x": 1020,
         "y": 340,
         "wires": [
             [
@@ -38,7 +38,8 @@
                 "982468b13a9f2aad",
                 "73a1c76e5f96479c",
                 "b25c22bb5479a509",
-                "8783469180b243cc"
+                "8783469180b243cc",
+                "0b396cd776adf32c"
             ]
         ]
     },
@@ -82,13 +83,12 @@
         "finalize": "",
         "libs": [],
         "x": 1370,
-        "y": 360,
+        "y": 440,
         "wires": [
             [
                 "8d5b63fc28f62665",
                 "89c8fba661037bd3",
-                "68586e84983dded1",
-                "77cd1395e10af3bb"
+                "68586e84983dded1"
             ]
         ]
     },
@@ -164,13 +164,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
-        "y": 280,
+        "x": 1330,
+        "y": 180,
         "wires": [
             [
                 "5a2990d39a473d2b",
-                "9c76d85e30da6e3e",
-                "77cd1395e10af3bb"
+                "9c76d85e30da6e3e"
             ]
         ]
     },
@@ -190,8 +189,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "SELECT idData, usuario, idSensor, tempCelsius, umidade, dataHora FROM dadosTU WHERE idSensor=27 order by 1 desc limit 1;",
-        "x": 710,
-        "y": 320,
+        "x": 770,
+        "y": 340,
         "wires": [
             [
                 "d143b0df087d1171"
@@ -302,8 +301,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1070,
-        "y": 720,
+        "x": 1150,
+        "y": 480,
         "wires": []
     },
     {
@@ -435,27 +434,6 @@
         "wires": []
     },
     {
-        "id": "77cd1395e10af3bb",
-        "type": "csv",
-        "z": "dbfc3e1c25b77dce",
-        "name": "",
-        "sep": ",",
-        "hdrin": "",
-        "hdrout": "none",
-        "multi": "one",
-        "ret": "\\n",
-        "temp": "",
-        "skip": "0",
-        "strings": true,
-        "include_empty_strings": "",
-        "include_null_values": "",
-        "x": 1810,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "ea546971b135ce54",
         "type": "ui_audio",
         "z": "dbfc3e1c25b77dce",
@@ -487,6 +465,114 @@
         "x": 1620,
         "y": 800,
         "wires": []
+    },
+    {
+        "id": "f937a0ddf0b4e9bb",
+        "type": "telegram sender",
+        "z": "dbfc3e1c25b77dce",
+        "name": "telegramBot",
+        "bot": "7347f8205950cac6",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1650,
+        "y": 300,
+        "wires": [
+            [
+                "504f37e4dc8dbf08"
+            ]
+        ]
+    },
+    {
+        "id": "0eb40ef313f4ea56",
+        "type": "telegram receiver",
+        "z": "dbfc3e1c25b77dce",
+        "name": "",
+        "bot": "7347f8205950cac6",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 1690,
+        "y": 220,
+        "wires": [
+            [],
+            [
+                "b36ac5ad50276311"
+            ]
+        ]
+    },
+    {
+        "id": "504f37e4dc8dbf08",
+        "type": "debug",
+        "z": "dbfc3e1c25b77dce",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0b396cd776adf32c",
+        "type": "function",
+        "z": "dbfc3e1c25b77dce",
+        "name": "tempTele",
+        "func": "\nmsg.payload = {\n    content: \"🥵 TempCelsius: \" + msg.payload[0].tempCelsius.toString() +\"\\n\"+\n    \"🧿 Umidade: \" + msg.payload[0].umidade.toString() + \"\\n\" +\n    \"🪬 Data:  \" + msg.payload[0].dataHora.toString() + \"\\n\",\n    type: \"message\",\n    chatId: 1657437360\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 280,
+        "wires": [
+            [
+                "f937a0ddf0b4e9bb"
+            ]
+        ]
+    },
+    {
+        "id": "b36ac5ad50276311",
+        "type": "debug",
+        "z": "dbfc3e1c25b77dce",
+        "name": "teleBug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2000,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b577b2cf74300f9c",
+        "type": "switch",
+        "z": "dbfc3e1c25b77dce",
+        "name": "",
+        "property": "",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 620,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "0d9c2edbc6857968",
@@ -530,6 +616,31 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "7347f8205950cac6",
+        "type": "telegram bot",
+        "botname": "ArduinoBot",
+        "usernames": "meuArduinoBot",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
     },
     {
         "id": "52e8852a8517a73e",
